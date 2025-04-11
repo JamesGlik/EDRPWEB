@@ -4,7 +4,7 @@ import EdrpLogo from '../../../assets/EdrpLogo.svg'
 
 const Footer = () => {
   return (
-    <div className='lg:px-[190px] px-4 pb-[60px]'>
+    <div className='lg:px-[120px] px-4 pb-[60px]'>
         <div className='flex flex-row justify-between'>
             <div>
               <Image src={EdrpLogo} width={153} height={33} alt="Edrp Logo" className=' cursor-pointer' />

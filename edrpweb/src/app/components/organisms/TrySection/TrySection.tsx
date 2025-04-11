@@ -15,12 +15,12 @@ const TrySection = () => {
   }
 
   return (
-    <div className='pt-[111px] flex flex-col items-center justify-center px-4 lg:px-[187px]'>
+    <div className='pt-[102px] flex flex-col items-center justify-center px-4 lg:px-[187px]'>
       <p className='font-bold text-center w-[48%]'>
         <span className='text-[#FF0040]'>EDRP-V</span> is a unique opportunity to immerse yourself in a virtual universe and play a chosen role, following the rules similar to real life. Become a politician, a bandit, a businessman, a taxi driver, a factory worker, a policeman or embody any other role. We have no restrictions, you are free to choose your path and create your own story in this virtual world! you are free to choose your path and create your own story in this virtual world!
       </p>
-      <h3 className='pt-[48px] font-bold text-[24px]'>Are you ready for new challenges?</h3>
-      <div className='bg-[#FF0040] h-[4px] w-[400px] rounded-full'></div>
+      <h3 className='pt-[48px] font-bold text-[18px]'>Are you ready for new challenges?</h3>
+      <div className='bg-[#FF0040] h-[4px] w-[296px] rounded-full'></div>
       <div className='flex flex-row pt-[48px] gap-[24px] font-extrabold'>
         <button
           onClick={handleScrollDown}

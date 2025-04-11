@@ -19,8 +19,13 @@
   }
 }
 
+
 body {
-  background: var(--background);
+  background-image: url('../app/assets/BackgroundPage.svg'); /* path is relative to public/ */
+  background-size: cover;           /* or use `contain` depending on your preference */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment:scroll;     /* optional: makes it stay in place on scroll */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }

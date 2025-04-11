@@ -43,8 +43,8 @@ const MainPage = () => {
           </div>
 
           <div className="cursor-pointer">
-            <p className="font-extrabold bg-[#FF0040] rounded-[4px] px-[32px] py-[16px] transition-colors duration-300 hover:bg-[#313131]">
-              DONATION
+            <p className="font-extrabold bg-[#FF0040] rounded-[6px] px-[16px] py-[14px] transition-colors duration-300 hover:bg-[#d3d3d3] hover:text-[#131313]">
+              TOP UP BALANCE
             </p>
           </div>
         </div>

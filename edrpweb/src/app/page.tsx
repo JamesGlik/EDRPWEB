@@ -1,23 +1,37 @@
-import React from 'react';
+"use client";
+import React, { useState } from "react";
 import HeaderNav from './components/organisms/HeaderNav/HeaderNav';
-import CharactersSection from './components/organisms/CharactersSection/CharactersSection'
+import CharactersSection from './components/organisms/CharactersSection/CharactersSection';
 import TrySection from './components/organisms/TrySection/TrySection';
 import PhotosSection from './components/organisms/PhotosSection/PhotosSection';
 import DownloadSection from './components/organisms/DownloadSection/DownloadSection';
 import AboutUsSection from './components/organisms/AboutUsSection/AboutUsSection';
 import Footer from './components/organisms/Footer/Footer';
 
+import bgDefault from './assets/BackgroundPage.svg';
+import bgHovered from './assets/BackgroundPageColor.svg';
+
 const Page = () => {
+  const [isMiddleHovered, setIsMiddleHovered] = useState(false);
+
   return (
-   <>
-   <HeaderNav/>
-   <CharactersSection/>
-   <TrySection/>
-   <PhotosSection/>
-   <DownloadSection/>
-   <AboutUsSection/>
-   <Footer/>
-   </>
+    <div
+      className="min-h-screen bg-cover bg-center bg-no-repeat transition-all duration-600"
+      style={{
+        backgroundImage: `url(${isMiddleHovered ? bgHovered.src : bgDefault.src})`,
+      }}
+    >
+      <HeaderNav />
+      <CharactersSection
+        isMiddleHovered={isMiddleHovered}
+        setIsMiddleHovered={setIsMiddleHovered}
+      />
+      <TrySection />
+      <PhotosSection />
+      <DownloadSection />
+      <AboutUsSection />
+      <Footer />
+    </div>
   );
 };
 

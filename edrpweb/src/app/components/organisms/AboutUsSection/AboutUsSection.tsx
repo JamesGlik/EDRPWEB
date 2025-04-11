@@ -24,14 +24,23 @@ const AboutUsSection = () => {
     },
     {
       question: 'Where can I find server rules?',
-      answer: 'The section with server rules, complaints about players and other topics can be found on the project forum'
+      answer: 'The section with server rules, complaints about players and other topics can be found on the project forum.'
     },
   ]
 
   return (
-    <div className='lg:px-[160px] px-4 pb-[105px]'>
-      <h1 className='text-[24px] font-extrabold'>ANSWERS TO FREQUENTLY ASKED QUESTIONS</h1>
-      <p className='text-[#C2C2C2] font-bold pt-[12px]'>The main questions which you should read</p>
+    <div className='lg:px-[120px] px-4 pb-[106px]'>
+      <div className='flex justify-between'>
+        <div>
+          <h1 className='text-[24px] font-extrabold'>ANSWERS TO FREQUENTLY ASKED QUESTIONS</h1>
+          <p className='text-[#C2C2C2] font-bold pt-[12px]'>The main questions which you should read</p>
+        </div>
+        <div>
+          <button className='font-extrabold bg-[#FF0040] p-[18px] rounded-[6px] cursor-pointer transition-colors duration-300 hover:bg-[#d3d3d3] hover:text-[#131313]'>
+            CHECK OUR FORUM AND RULES
+          </button>
+        </div>
+      </div>
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
         {faqs.map((faq, index) => (
           <div key={index} className='bg-[#0D0D0D] border border-[#373737] p-[24px] rounded-[12px] transition-colors duration-300 hover:bg-[#292929] cursor-pointer'>

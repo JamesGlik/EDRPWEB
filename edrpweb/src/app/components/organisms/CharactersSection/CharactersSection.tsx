@@ -1,8 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 
-// Card + Character image imports
+type CharactersSectionProps = {
+  isMiddleHovered: boolean;
+  setIsMiddleHovered: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
 import card1Gray from "../../../assets/card1.svg";
 import card1Color from "../../../assets/card1color.svg";
 import char1 from "../../../assets/char1.png";
@@ -30,7 +34,6 @@ import card7Gray from "../../../assets/card7.svg";
 import card7Color from "../../../assets/card7color.svg";
 import char7 from "../../../assets/char6.png";
 
-// 🎯 Play button image
 import playButton from "../../../assets/StartGame.svg";
 
 const cardData = [
@@ -91,9 +94,10 @@ const cardData = [
   },
 ];
 
-const CharactersSection = () => {
-  const [isMiddleHovered, setIsMiddleHovered] = useState(false);
-
+const CharactersSection: React.FC<CharactersSectionProps> = ({
+  isMiddleHovered,
+  setIsMiddleHovered,
+}) => {
   return (
     <div className="pb-[101px] pt-[66px] px-4 w-full">
       <div className="flex justify-center items-end gap-[16px] flex-wrap transition-all">
@@ -107,33 +111,34 @@ const CharactersSection = () => {
               onMouseEnter={() => isMiddle && setIsMiddleHovered(true)}
               onMouseLeave={() => isMiddle && setIsMiddleHovered(false)}
             >
-              {/* Gray card */}
               <Image
                 src={card.graySrc}
                 alt={card.alt}
-                className={`absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-[800ms] ease-in-out ${
-                  isMiddleHovered
+                className={`absolute top-0 left-0 w-full h-full object-contain transition-normal duration-[300ms] ease-in-out ${
+                  isMiddle
+                    ? isMiddleHovered
+                      ? "opacity-0"
+                      : "opacity-100"
+                    : isMiddleHovered
                     ? "opacity-0"
-                    : isMiddle
-                    ? "opacity-100"
-                    : "group-hover:opacity-0 opacity-100"
+                    : "opacity-100 group-hover:opacity-0"
                 }`}
               />
 
-              {/* Colored card */}
               <Image
                 src={card.colorSrc}
                 alt={card.alt}
-                className={`w-[225px] h-[607px] object-contain transition-opacity duration-[800ms] ease-in-out ${
-                  isMiddleHovered
+                className={`w-[225px] h-[607px] object-contain transition-normal duration-[300ms] ease-in-out ${
+                  isMiddle
+                    ? isMiddleHovered
+                      ? "opacity-100"
+                      : "opacity-0"
+                    : isMiddleHovered
                     ? "opacity-100"
-                    : isMiddle
-                    ? "opacity-0"
-                    : "group-hover:opacity-100 opacity-0"
+                    : "opacity-0 group-hover:opacity-100"
                 }`}
               />
 
-              {/* Play button only on middle card */}
               {isMiddle && (
                 <button className="absolute z-20 bottom-[20px] left-[35px] flex flex-col items-center focus:outline-none cursor-pointer">
                   <Image
@@ -151,7 +156,6 @@ const CharactersSection = () => {
                 </button>
               )}
 
-              {/* Character image (skip middle card) */}
               {!isMiddle && card.charSrc && (
                 <div className="absolute bottom-[-50px] z-10 w-full">
                   <Image
@@ -166,17 +170,15 @@ const CharactersSection = () => {
                 </div>
               )}
 
-              {/* Role label text on hover */}
               {!isMiddle && card.label && (
-                <div className="absolute bottom-[50px] w-full flex justify-center z-20">
+                <div className="absolute bottom-[50px] w-full flex flex-col items-center justify-center z-20">
                   <span
-                    className={`
-                      opacity-0 translate-y-4 
-                      group-hover:opacity-100 group-hover:translate-y-0 
-                      transition-all duration-500 ease-in-out
-                      bg-opacity-60  px-3 py-1 rounded 
-                      font-extrabold tracking-wide text-[18px]
-                    `}
+                    className={`opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out bg-opacity-60 px-3 py-1 rounded font-extrabold tracking-wide text-[16px] text-[#ffffffa1]`}
+                  >
+                    FRACTION
+                  </span>
+                  <span
+                    className={`opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out bg-opacity-60 px-3 py-1 rounded font-extrabold tracking-wide text-[18px]`}
                   >
                     {card.label}
                   </span>
