@@ -7,9 +7,9 @@ import HeaderText from "../../atoms/HeaderText/HeaderText";
 const MainPage = () => {
   return (
     <header>
-      <div className="relative lg:px-[191px] px-4 pt-[54px] w-full">
+      <div className="relative lg:px-[120px] px-4 pt-[57px] w-full">
         <div className="flex flex-row justify-between items-center relative">
-          <div className="flex flex-row items-center gap-[63px]">
+          <div className="flex flex-row items-center gap-[44px]">
             <div>
               <Image src={EdrpLogo} width={153} height={33} alt="Edrp Logo" />
             </div>
