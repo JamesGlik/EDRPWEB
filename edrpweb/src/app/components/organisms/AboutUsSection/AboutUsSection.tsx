@@ -33,7 +33,7 @@ const AboutUsSection = () => {
       <div className='flex justify-between'>
         <div>
           <h1 className='text-[24px] font-extrabold'>ANSWERS TO FREQUENTLY ASKED QUESTIONS</h1>
-          <p className='text-[#C2C2C2] font-bold pt-[12px]'>The main questions which you should read</p>
+          <p className='text-[#C2C2C2] font-bold'>The main questions which you should read</p>
         </div>
         <div>
           <button className='font-extrabold bg-[#FF0040] p-[18px] rounded-[6px] cursor-pointer transition-colors duration-300 hover:bg-[#d3d3d3] hover:text-[#131313]'>

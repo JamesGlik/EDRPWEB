@@ -21,11 +21,45 @@
 
 
 body {
-  background-image: url('../app/assets/BackgroundPage.svg'); /* path is relative to public/ */
   background-size: cover;           /* or use `contain` depending on your preference */
   background-position: center;
   background-repeat: no-repeat;
   background-attachment:scroll;     /* optional: makes it stay in place on scroll */
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'ProxiNova', sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-drag: none;
+}
+
+img {
+  pointer-events: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background-color: #FF0040;
+    color: white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  ::selection {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+
+@font-face {
+  font-family: 'ProxiNova';
+  src: url('/fonts/myFont/Proxima_Nova_Extrabold.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
 }

@@ -7,6 +7,7 @@ import PhotosSection from './components/organisms/PhotosSection/PhotosSection';
 import DownloadSection from './components/organisms/DownloadSection/DownloadSection';
 import AboutUsSection from './components/organisms/AboutUsSection/AboutUsSection';
 import Footer from './components/organisms/Footer/Footer';
+import '../../../edrpweb/src/app/globals.css';
 
 import bgDefault from './assets/BackgroundPage.svg';
 import bgHovered from './assets/BackgroundPageColor.svg';
@@ -16,7 +17,7 @@ const Page = () => {
 
   return (
     <div
-      className="min-h-screen bg-cover bg-center bg-no-repeat transition-all duration-600"
+      className="min-h-screen bg-cover bg-center bg-no-repeat transition-all duration-00 font-[ProxiNova]"
       style={{
         backgroundImage: `url(${isMiddleHovered ? bgHovered.src : bgDefault.src})`,
       }}

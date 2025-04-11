@@ -6,24 +6,24 @@ const Footer = () => {
   return (
     <div className='lg:px-[120px] px-4 pb-[60px]'>
         <div className='flex flex-row justify-between'>
-            <div>
+            <div className='cursor-pointer'>
               <Image src={EdrpLogo} width={153} height={33} alt="Edrp Logo" className=' cursor-pointer' />
             </div>
             <div className='space-x-[80px] flex'>
                 <div className='space-y-4'>
-                    <h3 className='font-extrabold cursor-pointer'>START GAME</h3>
-                    <h3 className='text-[#C2C2C2] text-[14px] font-bold cursor-pointer'>Start Game</h3>
-                    <h3 className='text-[#C2C2C2] text-[14px] font-bold cursor-pointer'>Forum</h3>
+                    <h3 className='font-extrabold '>START GAME</h3>
+                    <h3 className='text-[#C2C2C2] text-[14px] font-bold cursor-pointer hover:text-[#FFFFFF]'>Start Game</h3>
+                    <h3 className='text-[#C2C2C2] text-[14px] font-bold cursor-pointer hover:text-[#FFFFFF]'>Forum</h3>
                 </div>
                 <div className='space-y-4'>
-                    <h3 className='font-extrabold cursor-pointer'>MAIN INFORMATION</h3>
-                    <h3 className='text-[#C2C2C2] text-[14px] font-bold cursor-pointer'>Discord</h3>
-                    <h3 className='text-[#C2C2C2] text-[14px] font-bold cursor-pointer'>About</h3>
+                    <h3 className='font-extrabold '>MAIN INFORMATION</h3>
+                    <h3 className='text-[#C2C2C2] text-[14px] font-bold cursor-pointer hover:text-[#FFFFFF] font-proxiNova'>User Agreement</h3>
+                    <h3 className='text-[#C2C2C2] text-[14px] font-bold cursor-pointer hover:text-[#FFFFFF]'>Privacy Policy</h3>
                 </div>
                 <div className='space-y-4'>
-                    <h3 className='font-extrabold cursor-pointer'>CONTACT</h3>
-                    <h3 className='text-[#C2C2C2] text-[14px] font-bold cursor-pointer'>Youtube Channel</h3>
-                    <h3 className='text-[#C2C2C2] text-[14px] font-bold cursor-pointer'>help@edrp-v.ge</h3>
+                    <h3 className='font-extrabold '>CONTACT</h3> 
+                    <h3 className='text-[#C2C2C2] text-[14px] font-bold cursor-pointer hover:text-[#FFFFFF]'>Youtube Channel</h3>
+                    <h3 className='text-[#C2C2C2] text-[14px] font-bold cursor-pointer hover:text-[#FFFFFF]'>help@edrp-v.ge</h3>
                 </div>
             </div>
             <div className=''>

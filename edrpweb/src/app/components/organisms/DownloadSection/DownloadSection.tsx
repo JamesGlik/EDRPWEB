@@ -23,7 +23,7 @@ const DownloadSection = () => {
         <div className='flex flex-row justify-between gap-[122px]'>
             <div className=''>
                 <h1 className='text-[24px] font-extrabold'>HOW TO START THE GAME?</h1>
-                <p className='font-bold pb-[24px]'>Just two simple steps and you're ready to play! </p>
+                <p className='font-bold text-[#C2C2C2] pb-[24px]'>Just two simple steps and you're ready to play! </p>
                 <div className='flex flex-row bg-[#0D0D0D] border border-[#373737] rounded-[12px] py-[20px] px-[20px] items-center xl:w-[820px]'>
                     <Image
                         src={Gta5Logo}
@@ -35,7 +35,7 @@ const DownloadSection = () => {
                         <p className='font-extrabold'>Purchase Grand Theft Auto V Legacy</p>
                         <p className='font-light text-[14px] text-[#C2C2C2]'>You can`t play with Grand Theft Auto V Enhanced edition</p>
                     </div>
-                    <button className='font-extrabold bg-[#FF0040] px-[50px] py-[18px] rounded-[6px] ml-auto cursor-pointer transition-colors duration-300 hover:bg-[#d3d3d3] hover:text-[#131313]'>PURCHASE</button>
+                    <button className='w-[186px] font-extrabold bg-[#FF0040] px-[50px] py-[18px] rounded-[6px] ml-auto cursor-pointer transition-colors duration-300 hover:bg-[#d3d3d3] hover:text-[#131313]'>PURCHASE</button>
                 </div>
                 <div className='flex flex-row bg-[#0D0D0D] border border-[#373737] rounded-[12px] py-[20px] px-[20px] items-center mt-[24px]'>
                     <Image
@@ -48,13 +48,13 @@ const DownloadSection = () => {
                         <p className='font-extrabold '>Download RAGE MP Launcher</p>
                         <p className='font-light text-[14px] text-[#C2C2C2]'>Download Rage Multiplayer From Official Website</p>
                     </div>
-                    <button className='font-extrabold bg-[#FF0040] px-[50px] py-[18px] rounded-[6px] ml-auto cursor-pointer transition-colors duration-300 hover:bg-[#d3d3d3] hover:text-[#131313]'>DOWNLOAD</button>
+                    <button className='w-[186px] font-extrabold bg-[#FF0040] px-[50px] py-[18px] rounded-[6px] ml-auto cursor-pointer transition-colors duration-300 hover:bg-[#d3d3d3] hover:text-[#131313]'>DOWNLOAD</button>
                 </div>
             </div>
 
             <div>
                 <h1 className='text-[24px] font-extrabold'>MOVE WITH US</h1>
-                <p className='font-bold pb-[24px]'>Be the first to know about promotions and news </p>
+                <p className='font-bold text-[#C2C2C2] pb-[24px]'>Be the first to know about promotions and news </p>
                 <div className="grid grid-cols-3 gap-[24px]">
                     {socialLinks.map((item, index) => (
                         <div
