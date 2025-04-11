@@ -140,7 +140,7 @@ const CharactersSection: React.FC<CharactersSectionProps> = ({
               />
 
               {isMiddle && (
-                <button className="absolute z-20 bottom-[20px] left-[35px] flex flex-col items-center focus:outline-none cursor-pointer">
+                <button className="absolute z-20 bottom-[20px] left-[40px] flex flex-col items-center focus:outline-none cursor-pointer">
                   <Image
                     src={playButton}
                     alt="Play Button"
