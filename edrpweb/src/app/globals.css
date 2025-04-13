@@ -59,7 +59,7 @@ img {
 
 @font-face {
   font-family: 'ProxiNova';
-  src: url('/fonts/myFont/Proxima_Nova_Extrabold.otf') format('opentype');
-  font-weight: 900;
+  src: url('/fonts/myFont/Proxima_Nova_Bold.otf') format('opentype');
+  font-weight: 800;
   font-style: normal;
 }

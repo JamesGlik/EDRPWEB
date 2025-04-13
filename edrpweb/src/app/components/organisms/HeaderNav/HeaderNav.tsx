@@ -27,8 +27,8 @@ const MainPage = () => {
                   alt="Two Men Logo"
                 />
               </div>
-              <div className="flex flex-row gap-[6px] text-[14px] font-extrabold">
-                <p className="text-[#FFFFFF99]">Online:</p>
+              <div className="flex flex-row gap-[6px] text-[16px] font-extrabold">
+                <p className="text-[#FFFFFF99]">ONLINE:</p>
                 <span>293</span>
               </div>
             </div>
