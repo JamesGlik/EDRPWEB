@@ -110,7 +110,7 @@ const CharactersSection: React.FC<CharactersSectionProps> = ({
               className="relative overflow-hidden rounded-md group"
               onMouseEnter={() => isMiddle && setIsMiddleHovered(true)}
               onMouseLeave={() => isMiddle && setIsMiddleHovered(false)}
-            >
+             >
               <Image
                 src={card.graySrc}
                 alt={card.alt}
@@ -140,7 +140,7 @@ const CharactersSection: React.FC<CharactersSectionProps> = ({
               />
 
               {isMiddle && (
-                <button className="absolute z-20 bottom-[20px] left-[40px] flex flex-col items-center focus:outline-none cursor-pointer">
+                <button className="absolute z-20 bottom-[20px] left-[45px] flex flex-col items-center justify-center text-center focus:outline-none cursor-pointer">
                   <Image
                     src={playButton}
                     alt="Play Button"
@@ -150,7 +150,7 @@ const CharactersSection: React.FC<CharactersSectionProps> = ({
                         : ""
                     }`}
                   />
-                  <span className="pt-[16px] text-[21px] font-extrabold flex justify-center items-center w-[50%] tracking-wide">
+                  <span className="pt-[16px] text-[21px] font-extrabold flex justify-center items-center w-[50%] tracking-wide leading-[1.3]">
                     START GAME
                   </span>
                 </button>
@@ -171,14 +171,14 @@ const CharactersSection: React.FC<CharactersSectionProps> = ({
               )}
 
               {!isMiddle && card.label && (
-                <div className="absolute bottom-[50px] w-full flex flex-col items-center justify-center z-20">
+                <div className="absolute bottom-[20px] w-full flex flex-col items-center justify-center z-20">
                   <span
-                    className={`opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out bg-opacity-60 px-3 py-1 rounded font-extrabold tracking-wide text-[16px] text-[#ffffffa1]`}
+                    className={`opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out bg-opacity-60  rounded font-extrabold tracking-wide text-[18px] text-[#ffffffa1]`}
                   >
                     FRACTION
                   </span>
                   <span
-                    className={`opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out bg-opacity-60 px-3 py-1 rounded font-extrabold tracking-wide text-[18px]`}
+                    className={`opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out bg-opacity-60 rounded font-extrabold tracking-wide text-[20px]`}
                   >
                     {card.label}
                   </span>

@@ -4,7 +4,7 @@ import Birja from '../../../assets/Birja.png';
 
 export default function Page() {
   return (
-    <section className="flex flex-col items-center justify-center px-[120px] pt-[155px]">
+    <section className="flex flex-col items-center justify-center px-[120px]">
       <div className="flex flex-col xl:flex-row gap-[218px] w-full justify-between items-start">
         
         <div className="flex flex-col items-start text-start">

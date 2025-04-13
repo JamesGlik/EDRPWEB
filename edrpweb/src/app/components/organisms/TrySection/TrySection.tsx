@@ -1,56 +1,98 @@
-'use client'
+"use client";
 
-import React from 'react'
-import Image from 'next/image'
-import ArrowDown from '../../../assets/ArrowDown.svg'
-import ArrowUp from '../../../assets/ArrowUp.svg'
+import React, { useState } from "react";
+import Image from "next/image";
+import ArrowDown from "../../../assets/ArrowDown.svg";
+import ArrowUp from "../../../assets/ArrowUp.svg";
+import GangsterImg from "../../../assets/LeftCharacter.svg";
+import LawImg from "../../../assets/RightCharacter.svg";
 
 const TrySection = () => {
-  const handleScrollDown = () => {
-    window.scrollBy({ top: 1300, behavior: 'smooth' }) 
-  }
+  const [hoveredSide, setHoveredSide] = useState<"left" | "right" | null>(null);
 
-  const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }) 
-  }
+
 
   return (
-    <div className='pt-[102px] flex flex-col items-center justify-center px-4 lg:px-[187px]'>
-      <p className='font-bold text-center w-[48%]'>
-        <span className='text-[#FF0040]'>EDRP-V</span> is a unique opportunity to immerse yourself in a virtual universe and play a chosen role, following the rules similar to real life. Become a politician, a bandit, a businessman, a taxi driver, a factory worker, a policeman or embody any other role. We have no restrictions, you are free to choose your path and create your own story in this virtual world! you are free to choose your path and create your own story in this virtual world!
-      </p>
-      <h3 className='pt-[48px] font-bold text-[18px]'>Are you ready for new challenges?</h3>
-      <div className='bg-[#FF0040] h-[4px] w-[296px] rounded-full'></div>
-      <div className='flex flex-row pt-[48px] gap-[24px] font-extrabold'>
-        <button
-          onClick={handleScrollDown}
-          className='bg-[#0D0D0D] pl-[24px] pr-[12px] py-[16px] border border-[#373737] rounded-[4px] cursor-pointer flex gap-[56px]'
-        >
-          I Am Ready
-          <Image
-            src={ArrowDown}
-            width={24}
-            height={24}
-            alt="Arrow Down"
-            className='bg-[#1D1D1D] duration-300 hover:bg-[#292929]'
-          />
-        </button>
-        <button
-          onClick={handleScrollToTop}
-          className='bg-[#0D0D0D] pl-[24px] pr-[12px] py-[16px] border border-[#373737] rounded-[4px] cursor-pointer flex gap-[56px]'
-        >
-          I Am Not
-          <Image
-            src={ArrowUp}
-            width={24}
-            height={24}
-            alt="Arrow Up"
-            className='bg-[#1D1D1D] duration-300 hover:bg-[#292929]'
-          />
-        </button>
+    <div
+      className="relative w-full h-screen overflow-hidden mb-[-200px]"
+      onMouseMove={(e) => {
+        const middle = window.innerWidth / 2;
+        setHoveredSide(e.clientX < middle ? "left" : "right");
+      }}
+      onMouseLeave={() => setHoveredSide(null)}
+    >
+      <div className="absolute top-0 left-[80px] h-full w-[549px]">
+        <Image
+          src={GangsterImg}
+          alt="Gangster"
+          fill
+          className={`object-contain transition-all duration-300 ${
+            hoveredSide === "left" ? "grayscale-0" : "grayscale"
+          }`}
+        />
+      </div>
+  
+      <div className="absolute top-0 right-[110px] h-full w-[549px]">
+        <Image
+          src={LawImg}
+          alt="Law"
+          fill
+          className={`object-contain transition-all duration-300 ${
+            hoveredSide === "right" ? "grayscale-0" : "grayscale"
+          }`}
+        />
+      </div>
+      <div className="absolute top-[400px] left-1/2 z-20 transform -translate-x-1/2 -translate-y-1/2 text-center w-[40%] ">
+        <p className="text-white font-bold text-[18px] pb-[48px]">
+          <span className="text-[#FF0040]">EDRP-V</span> — is a unique opportunity to immerse
+          yourself in a virtual universe and play a chosen role, following the rules similar
+          to real life. Become a politician, a bandit, a businessman, a taxi driver, a factory
+          worker, a policeman or embody any other role. We have no restrictions, you are free
+          to choose your path and create your own story in this virtual world!
+        </p>
+        <h3 className="text-white font-bold text-[20px] ">
+          Are you ready for new challenges?
+        </h3>
+        <div className="bg-[#FF0040] h-[4px] w-[316px] rounded-full mx-auto" />
+  
+        <div className="flex gap-18 justify-center pt-[96px]">
+          <button
+            className={`px-[14px] py-[12px] border rounded-[4px] flex items-center justify-between gap-[16px] font-bold transition-all duration-300 ${
+              hoveredSide === "left"
+                ? "bg-[#FF0040] border-[#FF0040] text-white"
+                : "bg-[#0D0D0D] border-[#373737] border-[2px]"
+            }`}
+          >
+            <Image
+              src={ArrowDown}
+              width={24}
+              height={24}
+              alt="Arrow Down"
+              className="rounded-full rotate-90"
+            />
+            The way of the slum gangster
+          </button>
+  
+          <button
+            className={`px-[16px] py-[12px] border rounded-[4px] flex items-center justify-between gap-[16px] font-bold transition-all duration-300 ${
+              hoveredSide === "right"
+                ? "bg-[#FF0040] border-[#FF0040] text-white"
+                : "bg-[#0D0D0D] border-[#373737] border-[2px]"
+            }`}
+          >
+            The path of a Lawman
+            <Image
+              src={ArrowUp}
+              width={24}
+              height={24}
+              alt="Arrow Up"
+              className=" rounded-full rotate-90"
+            />
+          </button>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TrySection
+export default TrySection;

@@ -36,7 +36,7 @@ const AboutUsSection = () => {
           <p className='text-[#C2C2C2] font-bold'>The main questions which you should read</p>
         </div>
         <div>
-          <button className='font-extrabold bg-[#FF0040] p-[18px] rounded-[6px] cursor-pointer transition-colors duration-300 hover:bg-[#d3d3d3] hover:text-[#131313]'>
+          <button className='font-extrabold bg-[#FF0040] py-[18px] px-[24px] rounded-[6px] cursor-pointer transition-all duration-300 hover:shadow-[0_0_15px_1px_#FF0040]'>
             CHECK OUR FORUM AND RULES
           </button>
         </div>

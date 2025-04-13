@@ -12,7 +12,7 @@ const Footer = () => {
             <div className='space-x-[80px] flex'>
                 <div className='space-y-4'>
                     <h3 className='font-extrabold '>START GAME</h3>
-                    <h3 className='text-[#C2C2C2] text-[14px] font-bold cursor-pointer hover:text-[#FFFFFF]'>Start Game</h3>
+                    <h3 className='text-[#C2C2C2] text-[14px] font-normal cursor-pointer hover:text-[#FFFFFF]'>Start Game</h3>
                     <h3 className='text-[#C2C2C2] text-[14px] font-bold cursor-pointer hover:text-[#FFFFFF]'>Forum</h3>
                 </div>
                 <div className='space-y-4'>

@@ -59,7 +59,28 @@ img {
 
 @font-face {
   font-family: 'ProxiNova';
-  src: url('/fonts/myFont/Proxima_Nova_Bold.otf') format('opentype');
+  src: url('/fonts/myFont/Proxima_Nova_Extrabold.otf') format('opentype');
   font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProxiNova';
+  src: url('/fonts/myFont/Proxima_Nova_Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProxiNova';
+  src: url('/fonts/myFont/Proxima_Nova_Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProxiNova';
+  src: url('/fonts/myFont/Proxima_Nova_Regular.otf') format('opentype');
+  font-weight: 400;
   font-style: normal;
 }

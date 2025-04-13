@@ -9,12 +9,12 @@ const MainPage = () => {
     <header>
       <div className="relative lg:px-[120px] px-4 pt-[57px] w-full">
         <div className="flex flex-row justify-between items-center relative">
-          <div className="flex flex-row items-center gap-[44px]">
+          <div className="flex flex-row items-center gap-[32px]">
             <div>
               <Image src={EdrpLogo} width={153} height={33} alt="Edrp Logo" />
             </div>
             <div
-              className="flex flex-row items-center rounded-[4px] px-[12px] py-[10px]"
+              className="flex flex-row items-center rounded-[4px] px-[12px] py-[8px]"
               style={{
                 background: "linear-gradient(344deg, #222 43.88%, #333 88.47%)",
               }}
@@ -27,9 +27,9 @@ const MainPage = () => {
                   alt="Two Men Logo"
                 />
               </div>
-              <div className="flex flex-row gap-[6px] text-[16px] font-extrabold">
-                <p className="text-[#FFFFFF99]">ONLINE:</p>
-                <span>293</span>
+              <div className="flex flex-row gap-[6px] font-bold items-center">
+                <p className="text-[#C4C4C4] text-[14px]">ONLINE:</p>
+                <span className="">293</span>
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@ const MainPage = () => {
           </div>
 
           <div className="cursor-pointer">
-            <p className="font-extrabold bg-[#FF0040] rounded-[6px] px-[16px] py-[14px] transition-colors duration-300 hover:bg-[#d3d3d3] hover:text-[#131313]">
+            <p className="font-bold bg-[#FF0040] rounded-[6px] px-[18px] py-[12px] transition-all duration-300 hover:shadow-[0_0_15px_1px_#FF0040]">
               TOP UP BALANCE
             </p>
           </div>
