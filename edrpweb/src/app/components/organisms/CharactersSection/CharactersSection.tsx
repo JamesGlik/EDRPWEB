@@ -99,7 +99,7 @@ const CharactersSection: React.FC<CharactersSectionProps> = ({
   setIsMiddleHovered,
 }) => {
   return (
-    <div className="pb-[101px] pt-[66px] px-4 w-full">
+    <div className=" pt-[66px] px-4 w-full">
       <div className="flex justify-center items-end gap-[16px] flex-wrap transition-all">
         {cardData.map((card) => {
           const isMiddle = !!card.isMiddle;

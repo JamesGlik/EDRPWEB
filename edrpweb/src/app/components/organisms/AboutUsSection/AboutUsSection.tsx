@@ -36,16 +36,22 @@ const AboutUsSection = () => {
           <p className='text-[#C2C2C2] font-bold'>The main questions which you should read</p>
         </div>
         <div>
-          <button className='font-extrabold bg-[#FF0040] py-[18px] px-[24px] rounded-[6px] cursor-pointer transition-all duration-300 hover:shadow-[0_0_15px_1px_#FF0040]'>
-            CHECK OUR FORUM AND RULES
-          </button>
+          <a
+            href="https://forum.edrp-v.ge/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="font-extrabold bg-[#FF0040] py-[18px] px-[24px] rounded-[6px] cursor-pointer transition-all duration-300 hover:shadow-[0_0_15px_1px_#FF0040]">
+              CHECK OUR FORUM AND RULES
+            </button>
+          </a>
         </div>
       </div>
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
         {faqs.map((faq, index) => (
           <div key={index} className='bg-[#0D0D0D] border border-[#373737] p-[24px] rounded-[12px] transition-colors duration-300 hover:bg-[#292929] cursor-pointer'>
             <h3 className='font-extrabold'>{faq.question}</h3>
-            <p className='text-[14px] text-[#C2C2C2] font-bold pt-4'>{faq.answer}</p>
+            <p className='text-[14px] text-[#C2C2C2] font-semibold pt-4'>{faq.answer}</p>
           </div>
         ))}
       </div>

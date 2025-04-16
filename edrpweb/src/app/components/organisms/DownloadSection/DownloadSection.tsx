@@ -19,7 +19,7 @@ const socialLinks = [
 
 const DownloadSection = () => {
   return (
-    <div className='py-[192px] lg:px-[120px] px-4'>
+    <div className='pb-[192px] pt-[160px] lg:px-[120px] px-4'>
         <div className='flex flex-row justify-between gap-[122px]'>
             <div className=''>
                 <h1 className='text-[24px] font-extrabold'>HOW TO START THE GAME?</h1>
@@ -33,9 +33,16 @@ const DownloadSection = () => {
                     />
                     <div className='flex flex-col pl-[24px] '>
                         <p className='font-extrabold'>Purchase Grand Theft Auto V Legacy</p>
-                        <p className='font-light text-[14px] text-[#C2C2C2]'>You can`t play with Grand Theft Auto V Enhanced edition</p>
+                        <p className='font-semibold text-[14px] text-[#C2C2C2]'>You can`t play with Grand Theft Auto V Enhanced edition</p>
                     </div>
-                    <button className='w-[186px] font-extrabold bg-[#FF0040] px-[50px] py-[18px] rounded-[6px] ml-auto cursor-pointer transition-all duration-300 hover:shadow-[0_0_15px_1px_#FF0040]'>PURCHASE</button>
+                    <a 
+                        href="https://store.steampowered.com/app/271590/Grand_Theft_Auto_V_Legacy/" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className='ml-auto'
+                    >
+                        <button className='w-[186px] font-extrabold bg-[#FF0040] px-[50px] py-[18px] rounded-[6px] ml-auto cursor-pointer transition-all duration-300 hover:shadow-[0_0_15px_1px_#FF0040]'>PURCHASE</button>
+                    </a>
                 </div>
                 <div className='flex flex-row bg-[#0D0D0D] border border-[#373737] rounded-[12px] py-[20px] px-[20px] items-center mt-[24px]'>
                     <Image
@@ -45,10 +52,19 @@ const DownloadSection = () => {
                         alt="RageMP Logo"
                     />
                     <div className='flex flex-col pl-[24px] '>
-                        <p className='font-extrabold '>Download RAGE MP Launcher</p>
-                        <p className='font-light text-[14px] text-[#C2C2C2]'>Download Rage Multiplayer From Official Website</p>
+                        <p className='font-extrabold'>Download RAGE MP Launcher</p>
+                        <p className='font-semibold text-[14px] text-[#C2C2C2]'>Download Rage Multiplayer From Official Website</p>
                     </div>
-                    <button className='w-[186px] font-extrabold bg-[#FF0040] px-[50px] py-[18px] rounded-[6px] ml-auto cursor-pointer transition-all duration-300 hover:shadow-[0_0_15px_1px_#FF0040]'>DOWNLOAD</button>
+                    <a 
+                        href="https://rage.mp/#" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className='ml-auto'
+                    >
+                        <button className='w-[186px] font-extrabold bg-[#FF0040] px-[50px] py-[18px] rounded-[6px] cursor-pointer transition-all duration-300 hover:shadow-[0_0_15px_1px_#FF0040]'>
+                            DOWNLOAD
+                        </button>
+                    </a>
                 </div>
             </div>
 
