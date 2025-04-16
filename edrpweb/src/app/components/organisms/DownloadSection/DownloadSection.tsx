@@ -20,7 +20,7 @@ const socialLinks = [
 const DownloadSection = () => {
   return (
     <div className='pb-[192px] pt-[160px] lg:px-[120px] px-4'>
-        <div className='flex flex-row justify-between gap-[122px]'>
+        <div className='flex flex-wrap 2xl:flex-row 2xl:justify-center justify-between gap-[122px]'>
             <div className=''>
                 <h1 className='text-[24px] font-extrabold'>HOW TO START THE GAME?</h1>
                 <p className='font-bold text-[#C2C2C2] pb-[24px]'>Just two simple steps and you're ready to play! </p>

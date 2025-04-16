@@ -13,7 +13,7 @@ const Footer = () => {
             </div>
             <div className='space-x-[80px] flex'>
                 <div className='space-y-4'>
-                    <h3 className='font-extrabold '>START GAME</h3>
+                    <h3 className='font-extrabold '>ROUTE</h3>
                     <h3 className='text-[#999999] text-[14px] font-semibold cursor-pointer hover:text-[#FFFFFF]'>Start Game</h3>
                     <h3 className='text-[#999999] text-[14px] font-semibold cursor-pointer hover:text-[#FFFFFF]'
                         onClick={() => window.open("https://forum.edrp-v.ge/", "_blank")}>Forum</h3>
@@ -27,7 +27,6 @@ const Footer = () => {
                 </div>
                 <div className='space-y-4'>
                     <h3 className='font-extrabold '>CONTACT</h3> 
-                    <h3 className='text-[#999999] text-[14px] font-semibold cursor-pointer hover:text-[#FFFFFF]'>Youtube Channel</h3>
                     <h3 className='text-[#999999] text-[14px] font-semibold cursor-pointer hover:text-[#FFFFFF]'>help@edrp-v.ge</h3>
                 </div>
             </div>

@@ -30,7 +30,7 @@ const TopUpPage = () => {
   const [amount, setAmount] = useState('');
   const [termsAccepted, setTermsAccepted] = useState(false);
 
-  const conversionRate = 33;
+  const conversionRate = 70;
   const parsedAmount = parseInt(amount, 10);
   const coinAmount = !isNaN(parsedAmount) ? parsedAmount * conversionRate : 0;
 
@@ -42,7 +42,10 @@ const TopUpPage = () => {
   return (
     <div className="h-[463px] flex items-center justify-center mb-[100px] ">
       <div className="w-full max-w-md">
-        <h1 className="text-[24px] font-extrabold pb-[36px] text-center">TOP UP Your Account</h1>
+        <div className='flex items-center justify-center gap-4 pb-[36px]'>
+          <h1 className="text-[24px] font-extrabold text-center">TOP UP Your Account</h1>
+          <p className='text-[18px] font-extrabold bg-[#FF0040] rounded-[6px] px-[8px] py-[6px]'>2x</p>
+        </div>
         <form>
           <div className="mb-4 relative flex items-center bg-[#0D0D0D] border border-[#373737] rounded-[4px] focus-within:border-white focus-within:shadow-[0_0_0_1px_white] transition-all">
             <div className="pl-[21px] pr-4">
@@ -131,7 +134,7 @@ const TopUpPage = () => {
               onChange={(e) => setTermsAccepted(e.target.checked)}
               className="w-4 h-4 rounded-[4px] cursor-pointer accent-[#FF0040]"
             />
-            <label htmlFor="terms" className="pl-2 text-[14px] font-bold leading-snug text-[#C2C2C2]">
+            <label htmlFor="terms" className="pl-2 text-[14px] font-semibold leading-snug text-[#C2C2C2]">
               I have read and agree to the{' '}
               <span className="text-white cursor-pointer" onClick={() => (window.location.href = "/user-agreement")}>User Agreement</span> and{' '}
               <span className="text-white cursor-pointer" onClick={() => (window.location.href = "/privacy-policy")}>Privacy Policy</span>.

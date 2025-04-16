@@ -2,7 +2,7 @@ import React from "react";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen px-4 lg:px-[120px] py-12">
+    <div className="min-h-screen px-4 lg:px-[120px] py-12 text-[#C2C2C2]">
       <h1 className="text-[24px] text-center font-extrabold pb-2">
         სამომხმარებლო შეთანხმება
       </h1>

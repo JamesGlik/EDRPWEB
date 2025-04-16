@@ -100,7 +100,7 @@ const CharactersSection: React.FC<CharactersSectionProps> = ({
 }) => {
   return (
     <div className=" pt-[66px] px-4 w-full">
-      <div className="flex justify-center items-end gap-[16px] flex-wrap transition-all">
+      <div className="flex justify-center items-end gap-[16px] transition-all">
         {cardData.map((card) => {
           const isMiddle = !!card.isMiddle;
 
