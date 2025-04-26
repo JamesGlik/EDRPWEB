@@ -10,18 +10,16 @@ import LawImg from "../../../assets/RightCharacter.svg";
 const TrySection = () => {
   const [hoveredSide, setHoveredSide] = useState<"left" | "right" | null>(null);
 
-
-
   return (
     <div
-      className="relative w-full h-screen overflow-hidden mb-[-200px]"
+      className="relative w-full h-screen overflow-hidden mb-[-100px] xl:mt-[0px] sm:mt-[-200px] mt-[-250px]"
       onMouseMove={(e) => {
         const middle = window.innerWidth / 2;
         setHoveredSide(e.clientX < middle ? "left" : "right");
       }}
       onMouseLeave={() => setHoveredSide(null)}
     >
-      <div className="absolute top-0 left-[80px] h-full w-[549px]">
+      <div className="absolute top-0 xl:left-[80px] h-full xl:w-[549px] sm:w-[300px] w-[200px]">
         <Image
           src={GangsterImg}
           alt="Gangster"
@@ -31,8 +29,8 @@ const TrySection = () => {
           }`}
         />
       </div>
-  
-      <div className="absolute top-0 right-[110px] h-full w-[549px]">
+
+      <div className="absolute top-0 xl:right-[110px] right-[0px] h-full xl:w-[549px] sm:w-[300px] w-[200px]">
         <Image
           src={LawImg}
           alt="Law"
@@ -42,19 +40,21 @@ const TrySection = () => {
           }`}
         />
       </div>
-      <div className="absolute top-[400px] left-1/2 z-20 transform -translate-x-1/2 -translate-y-1/2 text-center w-[40%] ">
+      <div className="absolute xl:top-[400px] top-[800px] w-[90%] left-1/2 z-20 transform -translate-x-1/2 -translate-y-1/2 text-center xl:w-[40%] ">
         <p className="text-white font-bold text-[18px] pb-[48px]">
-          <span className="text-[#FF0040]">EDRP-V</span> — is a unique opportunity to immerse
-          yourself in a virtual universe and play a chosen role, following the rules similar
-          to real life. Become a politician, a bandit, a businessman, a taxi driver, a factory
-          worker, a policeman or embody any other role. We have no restrictions, you are free
-          to choose your path and create your own story in this virtual world!
+          <span className="text-[#FF0040]">EDRP-V</span> — is a unique
+          opportunity to immerse yourself in a virtual universe and play a
+          chosen role, following the rules similar to real life. Become a
+          politician, a bandit, a businessman, a taxi driver, a factory worker,
+          a policeman or embody any other role. We have no restrictions, you are
+          free to choose your path and create your own story in this virtual
+          world!
         </p>
-        <h3 className="text-white font-bold text-[20px] ">
+        <h3 className="text-white  font-bold text-[20px] ">
           Are you ready for new challenges?
         </h3>
         <div className="bg-[#FF0040] h-[4px] w-[316px] rounded-full mx-auto" />
-  
+
         <div className="flex gap-18 justify-center pt-[96px]">
           <button
             className={`px-[14px] py-[12px] border rounded-[4px] flex items-center justify-between gap-[16px] font-bold transition-all duration-300 ${
@@ -72,7 +72,7 @@ const TrySection = () => {
             />
             The way of the slum gangster
           </button>
-  
+
           <button
             className={`px-[16px] py-[12px] border rounded-[4px] flex items-center justify-between gap-[16px] font-bold transition-all duration-300 ${
               hoveredSide === "right"

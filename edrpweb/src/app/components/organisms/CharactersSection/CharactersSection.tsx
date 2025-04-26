@@ -99,18 +99,19 @@ const CharactersSection: React.FC<CharactersSectionProps> = ({
   setIsMiddleHovered,
 }) => {
   return (
-    <div className=" pt-[66px] px-4 w-full">
-      <div className="flex justify-center items-end gap-[16px] transition-all">
+    <div className="pt-[66px] px-4 w-full xl:flex hidden justify-center overflow-hidden">
+      <div className="flex justify-center items-end gap-[16px] transition-all max-w-[1600px] mx-auto">
         {cardData.map((card) => {
           const isMiddle = !!card.isMiddle;
 
           return (
             <div
               key={card.id}
-              className="relative overflow-hidden rounded-md group"
+              className="relative overflow-hidden rounded-md group w-full h-full"
               onMouseEnter={() => isMiddle && setIsMiddleHovered(true)}
               onMouseLeave={() => isMiddle && setIsMiddleHovered(false)}
-             >
+            >
+              {/* Gray card */}
               <Image
                 src={card.graySrc}
                 alt={card.alt}
@@ -125,10 +126,11 @@ const CharactersSection: React.FC<CharactersSectionProps> = ({
                 }`}
               />
 
+              {/* Color card */}
               <Image
                 src={card.colorSrc}
                 alt={card.alt}
-                className={`w-[225px] h-[607px] object-contain transition-normal duration-[300ms] ease-in-out ${
+                className={`w-full h-full object-contain transition-normal duration-[300ms] ease-in-out ${
                   isMiddle
                     ? isMiddleHovered
                       ? "opacity-100"
@@ -139,8 +141,9 @@ const CharactersSection: React.FC<CharactersSectionProps> = ({
                 }`}
               />
 
+              {/* START GAME button for middle card */}
               {isMiddle && (
-                <button className="absolute z-20 bottom-[20px] left-[45px] flex flex-col items-center justify-center text-center focus:outline-none cursor-pointer">
+                <button className="absolute z-20 bottom-[40px] left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center text-center focus:outline-none cursor-pointer">
                   <Image
                     src={playButton}
                     alt="Play Button"
@@ -156,8 +159,9 @@ const CharactersSection: React.FC<CharactersSectionProps> = ({
                 </button>
               )}
 
+              {/* Character image */}
               {!isMiddle && card.charSrc && (
-                <div className="absolute bottom-[-50px] z-10 w-full">
+                <div className="absolute bottom-0 z-[10] w-full h-full flex items-end justify-center pointer-events-none">
                   <Image
                     src={card.charSrc}
                     alt={`${card.alt} Character`}
@@ -170,10 +174,11 @@ const CharactersSection: React.FC<CharactersSectionProps> = ({
                 </div>
               )}
 
+              {/* Label */}
               {!isMiddle && card.label && (
                 <div className="absolute bottom-[20px] w-full flex flex-col items-center justify-center z-20">
                   <span
-                    className={`opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out bg-opacity-60  rounded font-extrabold tracking-wide text-[18px] text-[#ffffffa1]`}
+                    className={`opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out bg-opacity-60 rounded font-extrabold tracking-wide text-[18px] text-[#ffffffa1]`}
                   >
                     FRACTION
                   </span>
